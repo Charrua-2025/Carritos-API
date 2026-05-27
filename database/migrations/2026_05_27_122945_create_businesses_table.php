@@ -13,14 +13,6 @@ return new class extends Migration
     {
         Schema::create('businesses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->constrained();
-            $table->String('business_name');
-            $table->String('business_open');
-            $table->String('business_close');
-            $table->String('business_image');
-            $table->String('business_delivery');
-            $table->String('business_status');
-            $table->Enum('type',['foods','pizza', 'meals']);
             $table->timestamps();
         });
     }
