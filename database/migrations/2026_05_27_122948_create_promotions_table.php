@@ -11,10 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('promotions', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+       Schema::create('promotions', function (Blueprint $table) {
+    $table->id();
+
+    $table->foreignId('business_id')
+        ->constrained()
+        ->onDelete('cascade');
+
+    $table->string('title');
+ 
+
+    $table->text('description')->nullable();
+ 
+
+    $table->string('image')->nullable();
+
+    $table->date('start_date')->nullable();
+    $table->date('end_date')->nullable();
+
+    $table->boolean('active')->default(true);
+
+    $table->timestamps();
+});
     }
 
     /**

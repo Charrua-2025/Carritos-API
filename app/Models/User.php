@@ -21,7 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'phone',
+        'role',
+        'language', 
+        'profile_image'
     ];
 
     /**
@@ -49,6 +52,6 @@ class User extends Authenticatable
 
     public function business()
     {
-        return $this->hasMany(Business::class);
+        return $this->hasOne(Business::class);
     }
 }

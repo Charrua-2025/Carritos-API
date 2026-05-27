@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+       Schema::create('products', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('business_id')->constrained() ->onDelete('cascade');
+    $table->string('name');
+    $table->text('description')->nullable();
+    $table->decimal('price', 10, 2);
+    $table->string('image')->nullable();
+    $table->boolean('available')->default(true);
+    $table->boolean('featured')->default(false);
+    $table->timestamps();
+});
     }
 
     /**

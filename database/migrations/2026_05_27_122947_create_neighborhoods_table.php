@@ -10,11 +10,14 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('neighborhoods', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+    {Schema::create('neighborhoods', function (Blueprint $table) {
+    $table->id();
+
+    $table->string('city');
+
+    $table->string('name');
+    $table->timestamps();
+});
     }
 
     /**

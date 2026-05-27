@@ -13,6 +13,24 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('business_id')
+                ->constrained()
+                ->onDelete('cascade');
+
+            $table->enum('plan', [
+                'free',
+                'basic',
+                'premium'
+            ]);
+
+            $table->date('start_date');
+            $table->date('end_date');
+
+            $table->decimal('amount', 10, 2);
+
+            $table->boolean('active')->default(true);
+
             $table->timestamps();
         });
     }
