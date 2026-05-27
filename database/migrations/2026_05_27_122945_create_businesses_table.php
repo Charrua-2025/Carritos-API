@@ -23,7 +23,7 @@ return new class extends Migration
         ->constrained()
         ->nullOnDelete();
 
-    $table->foreignId('neighborhood_id')
+    $table->foreignId('location_id')
         ->nullable()
         ->constrained()
         ->nullOnDelete();

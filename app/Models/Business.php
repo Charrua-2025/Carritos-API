@@ -75,9 +75,9 @@ class Business extends Model
     }
 
     // Barrio/Zona
-    public function neighborhood()
+    public function location()
     {
-        return $this->belongsTo(Neighborhood::class);
+        return $this->belongsTo(Location::class);
     }
 
     // Productos

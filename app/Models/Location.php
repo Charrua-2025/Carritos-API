@@ -5,13 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Neighborhood extends Model
+class Location extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+
         'city',
-        'name'
+
+        'name',
+
+        'type',
+
+        'latitude',
+        'longitude'
+    ];
+
+    protected $casts = [
+
+        'latitude' => 'float',
+        'longitude' => 'float'
     ];
 
     /*
@@ -20,7 +33,7 @@ class Neighborhood extends Model
     |--------------------------------------------------------------------------
     */
 
-    // Negocios del barrio/zona
+    // Negocios asociados a esta ubicación
     public function businesses()
     {
         return $this->hasMany(Business::class);

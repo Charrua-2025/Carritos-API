@@ -50,8 +50,13 @@ class User extends Authenticatable
         ];
     }
 
-    public function business()
-    {
-        return $this->hasOne(Business::class);
-    }
+   public function businesses()
+{
+    return $this->hasMany(Business::class);
+}
+
+public function favorites()
+{
+    return $this->hasMany(Favorite::class);
+}
 }
