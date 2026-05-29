@@ -14,60 +14,41 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
-    'name' => 'Carrito'
-]);
+            'name' => 'Carrito'
+        ]);
 
-Category::create([
-    'name' => 'Chivitos'
-]);
+        Category::create([
+            'name' => 'Chivitos'
+        ]);
 
-Category::create([
-    'name' => 'Desayunos'
-]);
 
-Category::create([
-    'name' => 'Empanadas'
-]);
 
-Category::create([
-    'name' => 'Hamburguesas'
-]);
+        Category::create([
+            'name' => 'Empanadas'
+        ]);
 
-Category::create([
-    'name' => 'Milanesas'
-]);
+        Category::create([
+            'name' => 'Hamburguesas'
+        ]);
 
-Category::create([
-    'name' => 'Minutas'
-]);
+        Category::create([
+            'name' => 'Milanesas'
+        ]);
 
-Category::create([
-    'name' => 'Panchos'
-]);
+         Category::create([
+            'name' => 'Panchos'
+        ]);
 
-Category::create([
-    'name' => 'Pizzas'
-]);
+        Category::create([
+            'name' => 'Pizzas'
+        ]);
 
-Category::create([
-    'name' => 'Rotiseria'
-]);
+        Category::create([
+            'name' => 'Sin Glúten & Veganos'
+        ]);
 
-Category::create([
-    'name' => 'Sin Glúten'
-]);
-
-Category::create([
-    'name' => 'Veganos'
-]);
-
-Category::create([
-    'name' => 'Vegetarianos'
-]);
-
-Category::create([
-    'name' => 'Viandas'
-]);
-
+        Category::create([
+            'name' => 'Viandas'
+        ]);
     }
 }

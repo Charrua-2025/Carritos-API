@@ -50,7 +50,7 @@ class AuthController extends Controller
         $user = User::find(Auth::id());
 
         $token = $user->createToken('auth_token')->plainTextToken;
-
+dd('LOGIN API OK');
         return response()->json([
             'user' => $user,
             'token' => $token,
